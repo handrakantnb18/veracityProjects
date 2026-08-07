@@ -1,23 +1,78 @@
-import { useState } from 'react'
-
-import './App.css'
+import { useState } from 'react';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
-      <section id="center">
-       
-       <h1>Hello Word</h1>
-       
-      </section>    
+      {/* Navbar */}
+      <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div className="container">
+          <a className="navbar-brand fw-bold" href="#">
+            MyBank
+          </a>
+
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav ms-auto">
+              <li className="nav-item">
+                <a className="nav-link active" href="#">
+                  Home
+                </a>
+              </li>
+
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  Accounts
+                </a>
+              </li>
+
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  Transactions
+                </a>
+              </li>
+
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  Services
+                </a>
+              </li>
+
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      {/* Main Content */}
+      <div className="container mt-5">
+        <h1 className="text-center text-primary">
+          Hello World
+        </h1>
+
+        <p className="text-center">
+          Welcome to the React.
+        </p>
+      </div>
     </>
-  )
+  );
 }
 
-export default App
-
+export default App;
 
 // 1. Why is "String" immutable in Java?
 
