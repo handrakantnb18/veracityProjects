@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "angular": "^1.8.3",
     "bootstrap": "^5.3.8",
     "jquery": "^4.0.0",
     "react": "^19.2.8",
