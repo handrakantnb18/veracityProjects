@@ -18,3 +18,11 @@ section{
     align-items: center;
     height: 600px;
 }
+
+.form-op-but{
+    padding: 20px;
+}
+
+.netflix{
+    color: red;
+}
