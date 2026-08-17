@@ -1,7 +1,9 @@
 import { DataBindingComponent } from "./DataBindingComponent";
+import { MoreResonToJoin } from "./MoreResonToJoin";
 import { NetflixHeaderComponents } from "./NetflixHeaderComponent";
 import { NetflixMainComponent } from "./NetflixMainComponent";
 import { NetflixRegisterComponent } from "./NetflixRegisterComponent";
+import { TrandingNowComponents } from "./TrendingNowComponents";
 
 export default function NetflixIndexComponent(){
     return(
@@ -14,7 +16,10 @@ export default function NetflixIndexComponent(){
                     <main>
                         <NetflixMainComponent />
                         <NetflixRegisterComponent />
-                         <DataBindingComponent />
+                        <DataBindingComponent />
+                        <TrandingNowComponents />
+                        <MoreResonToJoin />
+
                     </main>
                     
                 </section>
