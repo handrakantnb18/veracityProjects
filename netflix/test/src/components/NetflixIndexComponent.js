@@ -1,3 +1,4 @@
+import { DataBindingComponent } from "./DataBindingComponent";
 import { NetflixHeaderComponents } from "./NetflixHeaderComponent";
 import { NetflixMainComponent } from "./NetflixMainComponent";
 import { NetflixRegisterComponent } from "./NetflixRegisterComponent";
@@ -13,6 +14,7 @@ export default function NetflixIndexComponent(){
                     <main>
                         <NetflixMainComponent />
                         <NetflixRegisterComponent />
+                         <DataBindingComponent />
                     </main>
                     
                 </section>
