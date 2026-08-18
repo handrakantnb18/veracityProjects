@@ -9,7 +9,7 @@ export function TrandingNowComponents(){
                 <div className="col-md-4">
                     <div className="card">
                         <img  
-                            src="./netfix-card.jpeg"
+                            src="../assets/netflix-card.jpeg"
                             className="card-img-top"
                             alt="Movie 1"
                         />
@@ -49,10 +49,10 @@ export function TrandingNowComponents(){
                         <img
                             src="https://via.placeholder.com/300x200"
                             className="card-img-top"
-                            alt="Movie 2"
+                            alt="Movie 3"
                         />
                         <div className="card-body">
-                            <h5 className="card-title">Movie Two</h5>
+                            <h5 className="card-title">Movie Three</h5>
                             <p className="card-text">
                                 Enjoy popular movies and shows.
                             </p>
@@ -68,10 +68,10 @@ export function TrandingNowComponents(){
                         <img
                             src="https://via.placeholder.com/300x200"
                             className="card-img-top"
-                            alt="Movie 2"
+                            alt="Movie 4"
                         />
                         <div className="card-body">
-                            <h5 className="card-title">Movie Two</h5>
+                            <h5 className="card-title">Movie Four</h5>
                             <p className="card-text">
                                 Enjoy popular movies and shows.
                             </p>
@@ -87,10 +87,10 @@ export function TrandingNowComponents(){
                         <img
                             src="https://via.placeholder.com/300x200"
                             className="card-img-top"
-                            alt="Movie 2"
+                            alt="Movie 5"
                         />
                         <div className="card-body">
-                            <h5 className="card-title">Movie Two</h5>
+                            <h5 className="card-title">Movie Five</h5>
                             <p className="card-text">
                                 Enjoy popular movies and shows.
                             </p>
