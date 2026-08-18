@@ -6,6 +6,7 @@
     width: 100vmax;
 }
 
+
 .box{
     background-color: rgba(0, 0, 0, 0.7);
     height: 100vmax;
@@ -26,3 +27,5 @@ section{
 .netflix{
     color: red;
 }
+
+
