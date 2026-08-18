@@ -21,10 +21,10 @@ export function MoreResonToJoin(){
                     <div className="card bg-dark text-white h-100 p-3">
                         <div className="card-body">
                             <h4 className="card-title">
-                                Enjoy on your TV
+                               Download your shows to watch offline
                             </h4>
                             <p className="card-text">
-                                Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.
+                                Save your favourites easily and always have something to watch.
                             </p>
                         </div>
                     </div>
@@ -34,10 +34,10 @@ export function MoreResonToJoin(){
                     <div className="card bg-dark text-white h-100 p-3">
                         <div className="card-body">
                             <h4 className="card-title">
-                                Enjoy on your TV
+                                Watch everywhere
                             </h4>
                             <p className="card-text">
-                                Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.
+                               Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.
                             </p>
                         </div>
                     </div>
@@ -47,10 +47,10 @@ export function MoreResonToJoin(){
                     <div className="card bg-dark text-white h-100 p-3">
                         <div className="card-body">
                             <h4 className="card-title">
-                                Enjoy on your TV
+                                Create profiles for kids
                             </h4>
                             <p className="card-text">
-                                Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.
+                                Send kids on adventures with their favourite characters in a space made just for them — free with your membership.
                             </p>
                         </div>
                     </div>
