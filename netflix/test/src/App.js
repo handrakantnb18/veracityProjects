@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NetflixIndexComponent from './components/NetflixIndexComponent';
 import ProductForm from "./components/ProductForm";
 import ProductList from "./components/ProductList";
+import "./style/index.css";
 
 function App() {
 
@@ -20,7 +21,7 @@ function App() {
 
   return (
 
-    <div style={{ maxWidth: 900, margin: "40px auto", fontFamily: "sans-serif" }}>
+    <div style={{ maxWidth: 900, margin: "40px auto", fontFamily: "sans-serif", justifyContent: "center" }}>
       <h1>Product Manager</h1>
 
       <ProductForm
