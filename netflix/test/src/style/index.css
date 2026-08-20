@@ -1,0 +1,350 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+/* =============================================================
+   1. TOKENS — colors, type, scale
+   ============================================================= */
+:root {
+  --paper: #F6F4EE;
+  --paper-raised: #FFFFFF;
+  --ink: #171B1A;
+  --ink-soft: #565F5B;
+  --line: #DCD6C6;
+  --accent: #C1832A;
+  --accent-ink: #5C3D0F;
+  --success: #4B7862;
+  --danger: #B4432E;
+  --focus: #2C6E63;
+
+  --font-display: "Oswald", "Arial Narrow", sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+
+  --radius: 3px;
+  --shadow-card: 0 1px 2px rgba(23, 27, 26, 0.06), 0 4px 16px rgba(23, 27, 26, 0.06);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root { --transition: 140ms ease; }
+}
+@media (prefers-reduced-motion: reduce) {
+  :root { --transition: 0ms; }
+}
+
+/* =============================================================
+   2. BASE
+   ============================================================= */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+button { font-family: inherit; }
+
+/* =============================================================
+   3. LAYOUT — shell, header, shared panel
+   ============================================================= */
+.app-shell {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 24px 96px;
+}
+
+.app-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 20px;
+  margin-bottom: 32px;
+  border-bottom: 2px solid var(--ink);
+}
+
+.app-header__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 28px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.app-header__eyebrow {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-ink);
+  margin-bottom: 4px;
+}
+
+.app-header__meta {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-soft);
+}
+
+.panel {
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+}
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 12px;
+}
+
+/* =============================================================
+   4. FORM — fields, labels, buttons
+   ============================================================= */
+.product-form {
+  padding: 24px;
+  margin-bottom: 32px;
+}
+
+.product-form__title {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.product-form__title::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 1px;
+  transform: rotate(45deg);
+}
+
+.product-form__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 20px;
+}
+
+.product-form__grid .field--full {
+  grid-column: 1 / -1;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field__label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.field input,
+.field textarea {
+  font-family: var(--font-body);
+  font-size: 14px;
+  padding: 9px 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+  color: var(--ink);
+  transition: border-color var(--transition), background var(--transition);
+}
+
+.field input:hover,
+.field textarea:hover {
+  border-color: var(--ink-soft);
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--focus);
+  background: var(--paper-raised);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(44, 110, 99, 0.14);
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 64px;
+}
+
+.field__error {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--danger);
+}
+
+.product-form__actions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.btn {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 13px;
+  padding: 10px 18px;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform var(--transition), background var(--transition), border-color var(--transition);
+}
+
+.btn:active { transform: translateY(1px); }
+.btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.btn--primary {
+  background: var(--ink);
+  color: var(--paper);
+}
+.btn--primary:hover:not(:disabled) {
+  background: var(--accent-ink);
+}
+
+.btn--ghost {
+  background: transparent;
+  border-color: var(--line);
+  color: var(--ink-soft);
+}
+.btn--ghost:hover {
+  border-color: var(--ink-soft);
+  color: var(--ink);
+}
+
+/* =============================================================
+   5. TABLE — product list + signature stock stamp
+   ============================================================= */
+.product-table-wrap { padding: 24px; }
+
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.product-table thead th {
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  padding: 0 12px 10px;
+  border-bottom: 1px solid var(--ink);
+}
+
+.product-table tbody tr {
+  border-bottom: 1px solid var(--line);
+  transition: background var(--transition);
+}
+.product-table tbody tr:hover {
+  background: rgba(193, 131, 42, 0.06);
+}
+
+.product-table td { padding: 12px; vertical-align: middle; }
+.product-table td.is-name { font-weight: 600; }
+.product-table td.is-category { color: var(--ink-soft); font-size: 13px; }
+.product-table td.is-price,
+.product-table td.is-qty {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.stock-stamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 8px 3px 6px;
+  border: 1px solid currentColor;
+  border-radius: 2px;
+}
+.stock-stamp::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.stock-stamp--in { color: var(--success); }
+.stock-stamp--low { color: var(--accent-ink); }
+.stock-stamp--out { color: var(--danger); }
+
+.row-actions { display: flex; gap: 8px; }
+.row-actions button {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  color: var(--ink-soft);
+  cursor: pointer;
+  padding: 4px 2px;
+  border-bottom: 1px solid transparent;
+  transition: color var(--transition), border-color var(--transition);
+}
+.row-actions button:hover { color: var(--ink); border-color: var(--ink); }
+.row-actions button.is-danger:hover { color: var(--danger); border-color: var(--danger); }
+
+.state-message {
+  padding: 32px 12px;
+  text-align: center;
+  color: var(--ink-soft);
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+.state-message--error { color: var(--danger); }
+
+/* =============================================================
+   6. RESPONSIVE
+   ============================================================= */
+@media (max-width: 640px) {
+  .app-shell { padding: 32px 16px 64px; }
+  .app-header { flex-direction: column; gap: 4px; }
+  .product-form__grid { grid-template-columns: 1fr; }
+
+  .product-table thead { display: none; }
+  .product-table,
+  .product-table tbody,
+  .product-table tr,
+  .product-table td {
+    display: block;
+    width: 100%;
+  }
+  .product-table tr { padding: 12px 4px; }
+  .product-table td { padding: 4px 8px; }
+  .product-table td.is-name { font-size: 15px; }
+}
