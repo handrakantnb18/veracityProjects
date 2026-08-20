@@ -49,7 +49,7 @@ export default function ProductForm({ editingProduct, onSaved, onCancel }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ display: "grid", gap: 8, maxWidth: 400 }}>
+    <form onSubmit={handleSubmit} style={{ display: "grid", gap: 18, maxWidth: 400, border: "1px solid #0a0505", borderRadius: 10, padding: 20,justifyContent:"center", margin: "20px auto"}}>
       <h3>{editingProduct ? "Edit Product" : "New Product"}</h3>
 
       <label>
