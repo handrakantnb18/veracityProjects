@@ -1,4 +1,5 @@
-import { useEffect, useState, createContext } from "react";
+import React, { useEffect, useState, createContext, useContext } from "react";
+
 
 var userDetailsContext = React.createContext(null);
 
@@ -13,20 +14,27 @@ export function ContextDemo(){
         <userDetailsContext.Provider value={userDetails}>
             <div className="container-fluid">
                 <h2>Outer Main Container - {userDetails.UserName}</h2>
+                <HomeComponent />
             </div>
         </userDetailsContext.Provider>
     )
 }
 
 function HomeComponent(){
+
+    const userInfo = useContext(userDetailsContext);
     return(
         <div className="bg-info" style={{height: '180px', pending:'20px'}}>
-            <h2>Home</h2>
+            <h2>Home - {userInfo.UserName}</h2>
+            <NavbarComponent />
         </div>
     )
 }
 
 function NavbarComponent(){
+
+    var userData = useContext(userDetailsContext);
+
     return(
         <div className="btn-toolbar bg-dark justify-content-between">
            <div>
