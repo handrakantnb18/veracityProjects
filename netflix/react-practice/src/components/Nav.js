@@ -1,5 +1,7 @@
 import React from "react";
 
+import "../components/style.css";
+
 import"bootstrap/dist/css/bootstrap.min.css";
 
 export function Nav() {
@@ -7,13 +9,14 @@ export function Nav() {
     return(
 
         
-        <nav className="container-fluid bg-dark text-white p-3">
-            <div className="row">
-                <div className="col-3">
-                    <h2 className="mb-4">
+        <nav className="container-fluid text-white p-3 ">
+            <div className="row ">
+
+                <div className="col-3  bg-dark p-3 ">
+                    <h4 className="mb-4">
                         Material Dashboard
-                    </h2>
-                    <div className="d-flex flex-column gap-3">
+                    </h4><hr />
+                    <div className="d-flex flex-column gap-3 ">
                         <a href="/dashboard" className="text-white text-decoration-none">
                             Dashboard
                         </a>
@@ -42,9 +45,15 @@ export function Nav() {
                     </div>                          
                 </div>
 
-                <div className="col-9 bg-light text-dark p-4">
+                <div className="col-9 bg-light text-dark scroll-auto">
+                     <div className="bg-light">
+                        <nav className="bg-dark p-3">
+                            dashboard
+                        </nav>
+                     </div>
+                     
                      <h2>Dashboard</h2>
-                     <div className="row mt-12">
+                    <div className="row mt-12 p-4">
                         <div className="col-3">
                             <div className="card p-3">
                                 <h5>Booking</h5>
@@ -53,7 +62,6 @@ export function Nav() {
                                 <span>than last week</span>
                             </div>
                         </div>
-                     
                         <div className="col-3">
                             <div className="card p-3">
                                 <h5>Today's Users</h5>
@@ -62,7 +70,6 @@ export function Nav() {
                                 <span>than last month</span>
                             </div>
                         </div>
-                     
                         <div className="col-3">
                             <div className="card p-3">
                                 <h5>Revenue</h5>
@@ -71,7 +78,6 @@ export function Nav() {
                                 <span>than yesterday</span>
                             </div>
                         </div>
-                     
                         <div className="col-3">
                             <div className="card p-3">
                                 <h5>Followers</h5>
@@ -79,7 +85,54 @@ export function Nav() {
                                 <span> Just updated</span>
                             </div>
                         </div>
-                     </div> 
+
+                                <div className="row mt-4 g-4">
+                                    <div className="col-4">
+                                        <div className="card p-3 h-100">
+                                            <strong>Websites Views</strong>
+                                            <span>Last Campaign Performance</span><hr />
+                                            <span> campaign sent 2 days ago</span>
+                                        </div>
+                                    </div>
+
+                                    <div className="col-4">
+                                        <div className="card p-3 h-100">
+                                            <strong>Daily Sales</strong>
+                                            <span>(+15%)increase in today sales</span><hr />
+                                            <span> updated 4 min ago</span>
+                                        </div>
+                                    </div>
+
+                                    <div className="col-4">
+                                        <div className="card p-3 h-200">
+                                            <strong>completed tasks</strong>
+                                            <span>Last Campaign Performance</span><hr />
+                                            <span>just updated</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div className="row mt-4 g-4">
+                                    <div className="col-8">
+                                        <div className="card p-3 h-200">
+                                            <strong>Projects</strong>
+                                            <span>30 done this month</span><hr />
+                                            <span>just updated</span>
+                                        </div>
+                                    </div>
+                                    <div className="col-4">
+                                        <div className="card p-3 h-200">
+                                            <strong>Orders overview</strong>
+                                            <span>24% this month</span><hr />
+                                            <span>just updated</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                    </div> 
+
+                    
 
                 </div>
             </div>
