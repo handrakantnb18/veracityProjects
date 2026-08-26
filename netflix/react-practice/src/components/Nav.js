@@ -3,13 +3,14 @@ import React from "react";
 import "../components/style.css";
 
 import"bootstrap/dist/css/bootstrap.min.css";
+import"bootstrap/dist/js/bootstrap.bundle.min.js";
 
 export function Nav() {
 
     return(
 
         
-        <nav className="container-fluid text-white p-3 ">
+        <nav className="container-fluid text-white p-3">
             <div className="row ">
 
                 <div className="col-3  bg-dark p-3 ">
@@ -82,7 +83,7 @@ export function Nav() {
                             <div className="card p-3">
                                 <h5>Followers</h5>
                                 <h4>+92</h4><hr />
-                                <span> Just updated</span>
+                                <span>Just updated</span>
                             </div>
                         </div>
 
@@ -91,7 +92,7 @@ export function Nav() {
                                         <div className="card p-3 h-100">
                                             <strong>Websites Views</strong>
                                             <span>Last Campaign Performance</span><hr />
-                                            <span> campaign sent 2 days ago</span>
+                                            <span>campaign sent 2 days ago</span>
                                         </div>
                                     </div>
 
@@ -99,7 +100,7 @@ export function Nav() {
                                         <div className="card p-3 h-100">
                                             <strong>Daily Sales</strong>
                                             <span>(+15%)increase in today sales</span><hr />
-                                            <span> updated 4 min ago</span>
+                                            <span>updated 4 min ago</span>
                                         </div>
                                     </div>
 
@@ -117,8 +118,62 @@ export function Nav() {
                                     <div className="col-8">
                                         <div className="card p-3 h-200">
                                             <strong>Projects</strong>
-                                            <span>30 done this month</span><hr />
-                                            <span>just updated</span>
+                                            <span>30 done this month</span>
+                                            <span>just updated</span><hr />
+
+                                            <div className="container mt-3">
+                                               
+                                                <table className="table" data-bs-theme= "white">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>COMPANIES</th>
+                                                            
+                                                            <th>MEMBERS</th>
+                                                            <th>BUDGET</th>
+                                                            <th>COMPLETION</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Material UI XD Version</td>
+                                                            <td></td>
+                                                            <td>$14,000</td>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Add Progress Track</td>
+                                                           <td></td>
+                                                            <td>$3,000</td>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Fix Platform Errors</td>
+                                                            <td></td>
+                                                            <td>Not set</td>  
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Launch our Mobile App</td>
+                                                            <td></td>
+                                                            <td>$20,500</td>
+                                                            <td></td>  
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Add the New Pricing Page</td>
+                                                            <td></td>
+                                                            <td>$500</td>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Redesign New Online Shop</td>
+                                                            <td></td>
+                                                            <td>$2,000</td>
+                                                            <td></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
                                         </div>
                                     </div>
                                     <div className="col-4">
