@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import './components/style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NetflixIndexComponent from './components/NetflixIndexComponent';
+// import NetflixIndexComponent from './components/NetflixIndexComponent';
 import ProductForm from "./components/ProductForm";
 import ProductList from "./components/ProductList";
 import "./style/index.css";
