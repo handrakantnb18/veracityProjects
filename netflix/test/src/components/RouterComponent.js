@@ -1,5 +1,17 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
+function Home() {
+
+}
+
+function About() {
+
+}
+
+function Contact() {
+
+}
+
 export function RouterComponent() {
 
     return(
@@ -11,7 +23,9 @@ export function RouterComponent() {
             </nav>
 
             <Routes>
-                <Route path="/"  />
+                <Route path="/"  element={<Home />} />
+                <Route path="/about"  element={<About />} />
+                <Route path="/"  element={<Contact />} />
             </Routes>
         </BrowserRouter>
     );
