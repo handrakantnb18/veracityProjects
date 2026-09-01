@@ -5,9 +5,9 @@ export function RouterComponent() {
     return(
         <BrowserRouter>
             <nav>
-                <link to="/">Home</link>
-                <link to="/about">About</link>
-                <link to="/contact">Contact</link>
+                <Link to="/">Home</Link>
+                <Link to="/about">About</Link>
+                <Link to="/contact">Contact</Link>
             </nav>
 
             <Routes>
